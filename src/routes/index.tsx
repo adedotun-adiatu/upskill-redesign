@@ -33,12 +33,38 @@ export const Route = createFileRoute("/")({
 });
 
 const categories = [
-  { label: "Leadership & Management", Icon: GraduationCap },
-  { label: "Mental Health", Icon: Brain },
-  { label: "Research & Advocacy", Icon: Microscope },
-  { label: "Seminars & Workshops", Icon: Users },
-  { label: "Specialised Courses", Icon: BookOpen },
+  {
+    label: "Leadership & Management",
+    Icon: GraduationCap,
+    description:
+      "Master the engine of digital leadership by learning to orchestrate high-end virtual worlds from the ground up. This elite training empowers leaders to command Unreal Engine 4, aligning technical workflows and driving high-level visual execution.",
+  },
+  {
+    label: "Mental Health",
+    Icon: Brain,
+    description:
+      "Equip educators with the literacy and frameworks to recognise, respond to, and de-stigmatise mental health in the classroom — building safer learning environments where students and teachers can thrive.",
+  },
+  {
+    label: "Research & Advocacy",
+    Icon: Microscope,
+    description:
+      "Translate evidence into policy. Our research and advocacy pathway trains educators to design rigorous studies, publish findings, and shape the conversations that move ministries and shift outcomes.",
+  },
+  {
+    label: "Seminars & Workshops",
+    Icon: Users,
+    description:
+      "Practical, high-density convenings led by sector experts. Each seminar packs strategy, hands-on practice, and peer exchange into focused sessions that ship lasting change to the classroom.",
+  },
+  {
+    label: "Specialised Courses",
+    Icon: BookOpen,
+    description:
+      "Targeted, deep-dive certifications across pedagogy, subject mastery, and emerging tools — built for educators who want to lead at the frontier of their discipline.",
+  },
 ];
+
 
 const cohorts = [
   {
