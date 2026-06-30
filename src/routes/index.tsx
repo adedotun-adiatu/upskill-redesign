@@ -230,20 +230,68 @@ function Home() {
             </a>
           </div>
 
-          <div className="grid grid-cols-2 gap-px overflow-hidden rounded-sm border border-line bg-line md:grid-cols-5">
-            {categories.map(({ label, Icon }) => (
-              <a
-                key={label}
-                href="#"
-                className="group flex flex-col justify-between gap-12 bg-canvas p-7 transition-colors hover:bg-zinc-50"
-              >
-                <div className="flex size-11 items-center justify-center rounded-sm bg-teal/10 text-teal transition-colors group-hover:bg-teal group-hover:text-white">
-                  <Icon className="size-5" strokeWidth={2.25} />
-                </div>
-                <h3 className="text-base font-bold leading-snug text-navy">{label}</h3>
-              </a>
-            ))}
+          <div className="grid gap-10 lg:grid-cols-[1.1fr_1fr] lg:gap-16">
+            {/* Tile list */}
+            <ul className="flex flex-col divide-y divide-line border-y border-line">
+              {categories.map(({ label, Icon }, i) => {
+                const isActive = activeService === i;
+                return (
+                  <li key={label}>
+                    <a
+                      href="#"
+                      onMouseEnter={() => setActiveService(i)}
+                      onFocus={() => setActiveService(i)}
+                      className="group flex items-center gap-6 py-6 transition-all duration-300"
+                    >
+                      <span
+                        className={`flex size-12 shrink-0 items-center justify-center rounded-sm transition-all duration-300 ${
+                          isActive
+                            ? "bg-teal text-white shadow-[0_8px_24px_-8px_rgba(0,122,135,0.6)]"
+                            : "bg-transparent text-navy/40"
+                        }`}
+                      >
+                        <Icon className="size-5" strokeWidth={2.25} />
+                      </span>
+                      <h3
+                        className={`flex-1 text-2xl font-bold tracking-tight transition-all duration-300 md:text-3xl ${
+                          isActive ? "text-teal translate-x-1" : "text-navy/40"
+                        }`}
+                      >
+                        {label}
+                      </h3>
+                      <ArrowUpRight
+                        className={`size-5 transition-all duration-300 ${
+                          isActive ? "text-teal opacity-100" : "opacity-0 -translate-x-2"
+                        }`}
+                      />
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+
+            {/* Preview pane */}
+            <div className="relative lg:sticky lg:top-28 lg:self-start">
+              <div className="rounded-sm border border-line bg-canvas p-8 md:p-10">
+                <span className="inline-flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.25em] text-teal">
+                  <span className="size-1.5 rounded-full bg-teal" /> Preview
+                </span>
+                <h3 className="mt-5 text-2xl font-bold leading-tight text-navy">
+                  {categories[activeService].label}
+                </h3>
+                <p className="mt-5 text-base leading-relaxed text-navy/75">
+                  {categories[activeService].description}
+                </p>
+                <a
+                  href="#"
+                  className="mt-8 inline-flex items-center gap-2 border-b border-teal/40 pb-0.5 text-sm font-semibold text-teal hover:border-teal"
+                >
+                  Explore this pathway <ArrowUpRight className="size-4" />
+                </a>
+              </div>
+            </div>
           </div>
+
         </div>
       </section>
 
