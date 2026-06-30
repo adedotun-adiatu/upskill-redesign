@@ -203,11 +203,12 @@ function Home() {
               href="#"
               className="inline-flex items-center gap-1.5 border-b border-teal/40 pb-0.5 text-sm font-semibold text-teal hover:border-teal"
             >
-              View all courses <ArrowUpRight className="size-4" />
+              View all programmes <ArrowUpRight className="size-4" />
             </a>
           </div>
 
-          <div className="grid gap-5 md:grid-cols-5 md:gap-4">
+          <div className="grid gap-5 md:grid-cols-4 md:gap-4">
+
             {categories.map(({ label, Icon, description, accent }) => (
               <a
                 key={label}
