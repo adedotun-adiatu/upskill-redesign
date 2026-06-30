@@ -64,26 +64,9 @@ const cohorts = [
 function Home() {
   return (
     <div className="min-h-screen bg-canvas font-sans text-navy">
-      {/* Utility Bar */}
-      <div className="bg-navy px-6 py-2.5 text-zinc-300">
-        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-2 text-[11px] font-medium uppercase tracking-widest">
-          <span className="hidden sm:inline">Train a Teacher · Change the World</span>
-          <div className="flex flex-wrap items-center gap-x-6 gap-y-1">
-            <span className="inline-flex items-center gap-1.5">
-              <Phone className="size-3" /> +234 916 291 7152
-            </span>
-            <span className="inline-flex items-center gap-1.5">
-              <MapPin className="size-3" /> Ikoyi, Lagos
-            </span>
-            <span className="hidden md:inline-flex items-center gap-1.5">
-              <Clock className="size-3" /> Mon–Fri 8:00–17:00
-            </span>
-          </div>
-        </div>
-      </div>
-
       {/* Main Nav */}
-      <nav className="sticky top-0 z-50 border-b border-line bg-canvas/90 backdrop-blur-md">
+      <nav className="sticky top-0 z-50 border-b border-line bg-canvas/70 backdrop-blur-xl backdrop-saturate-150">
+
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
           <a href="/" className="flex items-center gap-2.5">
             <div className="flex size-9 items-center justify-center rounded-sm bg-teal">
