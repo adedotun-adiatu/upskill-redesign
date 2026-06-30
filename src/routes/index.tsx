@@ -90,8 +90,10 @@ const cohorts = [
 ];
 
 function Home() {
+  const [activeService, setActiveService] = useState(0);
   return (
     <div className="min-h-screen bg-canvas font-sans text-navy">
+
       {/* Main Nav */}
       <nav className="sticky top-0 z-50 border-b border-line bg-canvas/70 backdrop-blur-xl backdrop-saturate-150">
 
