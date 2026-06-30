@@ -40,35 +40,29 @@ const categories = [
   {
     label: "Leadership & Management",
     Icon: GraduationCap,
-    description: "Equipping school leaders to drive vision, strategy and lasting change.",
-    accent: "#007A87", // signature teal
+    description: "Equipping school leaders to drive vision, strategy and lasting institutional change.",
+    accent: "#007A87",
   },
   {
     label: "Mental Health",
     Icon: Brain,
-    description: "Building classrooms where students and teachers feel safe, seen and supported.",
-    accent: "#C84B31", // warm terracotta
+    description: "Frameworks to recognise, respond to, and de-stigmatise mental health in the classroom — building safer spaces for students and teachers.",
+    accent: "#C84B31",
   },
   {
-    label: "Research & Advocacy",
-    Icon: Microscope,
-    description: "Turning classroom evidence into policy that shifts national outcomes.",
-    accent: "#003366", // deep navy
-  },
-  {
-    label: "Seminars & Workshops",
-    Icon: Users,
-    description: "High-density convenings that move strategy from theory into practice.",
-    accent: "#D4A11E", // civic gold
-  },
-  {
-    label: "Specialised Courses",
+    label: "Teaching Skills",
     Icon: BookOpen,
-    description: "Deep-dive certifications for educators leading the frontier of their craft.",
-    accent: "#4F8A6B", // sage green
+    description: "Equipping educators with 21st-century classroom techniques, learner-centred pedagogy and tools to drive measurable outcomes.",
+    accent: "#1D9E75",
   },
-
+  {
+    label: "Teacher Immersion",
+    Icon: Users,
+    description: "Our flagship programme — real school environments, multidisciplinary learning and hands-on teaching experience.",
+    accent: "#4F8A6B",
+  },
 ];
+
 
 
 const cohorts = [
