@@ -38,33 +38,34 @@ const categories = [
   {
     label: "Leadership & Management",
     Icon: GraduationCap,
-    description:
-      "Master the engine of digital leadership by learning to orchestrate high-end virtual worlds from the ground up. This elite training empowers leaders to command Unreal Engine 4, aligning technical workflows and driving high-level visual execution.",
+    description: "Equipping school leaders to drive vision, strategy and lasting change.",
+    accent: "#007A87", // signature teal
   },
   {
     label: "Mental Health",
     Icon: Brain,
-    description:
-      "Equip educators with the literacy and frameworks to recognise, respond to, and de-stigmatise mental health in the classroom — building safer learning environments where students and teachers can thrive.",
+    description: "Building classrooms where students and teachers feel safe, seen and supported.",
+    accent: "#C84B31", // warm terracotta
   },
   {
     label: "Research & Advocacy",
     Icon: Microscope,
-    description:
-      "Translate evidence into policy. Our research and advocacy pathway trains educators to design rigorous studies, publish findings, and shape the conversations that move ministries and shift outcomes.",
+    description: "Turning classroom evidence into policy that shifts national outcomes.",
+    accent: "#003366", // deep navy
   },
   {
     label: "Seminars & Workshops",
     Icon: Users,
-    description:
-      "Practical, high-density convenings led by sector experts. Each seminar packs strategy, hands-on practice, and peer exchange into focused sessions that ship lasting change to the classroom.",
+    description: "High-density convenings that move strategy from theory into practice.",
+    accent: "#D4A11E", // civic gold
   },
   {
     label: "Specialised Courses",
     Icon: BookOpen,
-    description:
-      "Targeted, deep-dive certifications across pedagogy, subject mastery, and emerging tools — built for educators who want to lead at the frontier of their discipline.",
+    description: "Deep-dive certifications for educators leading the frontier of their craft.",
+    accent: "#4F8A6B", // sage green
   },
+
 ];
 
 
