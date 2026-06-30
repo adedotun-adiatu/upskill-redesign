@@ -1,4 +1,6 @@
+import type { CSSProperties } from "react";
 import { createFileRoute } from "@tanstack/react-router";
+
 
 
 import {
@@ -38,33 +40,34 @@ const categories = [
   {
     label: "Leadership & Management",
     Icon: GraduationCap,
-    description:
-      "Master the engine of digital leadership by learning to orchestrate high-end virtual worlds from the ground up. This elite training empowers leaders to command Unreal Engine 4, aligning technical workflows and driving high-level visual execution.",
+    description: "Equipping school leaders to drive vision, strategy and lasting change.",
+    accent: "#007A87", // signature teal
   },
   {
     label: "Mental Health",
     Icon: Brain,
-    description:
-      "Equip educators with the literacy and frameworks to recognise, respond to, and de-stigmatise mental health in the classroom — building safer learning environments where students and teachers can thrive.",
+    description: "Building classrooms where students and teachers feel safe, seen and supported.",
+    accent: "#C84B31", // warm terracotta
   },
   {
     label: "Research & Advocacy",
     Icon: Microscope,
-    description:
-      "Translate evidence into policy. Our research and advocacy pathway trains educators to design rigorous studies, publish findings, and shape the conversations that move ministries and shift outcomes.",
+    description: "Turning classroom evidence into policy that shifts national outcomes.",
+    accent: "#003366", // deep navy
   },
   {
     label: "Seminars & Workshops",
     Icon: Users,
-    description:
-      "Practical, high-density convenings led by sector experts. Each seminar packs strategy, hands-on practice, and peer exchange into focused sessions that ship lasting change to the classroom.",
+    description: "High-density convenings that move strategy from theory into practice.",
+    accent: "#D4A11E", // civic gold
   },
   {
     label: "Specialised Courses",
     Icon: BookOpen,
-    description:
-      "Targeted, deep-dive certifications across pedagogy, subject mastery, and emerging tools — built for educators who want to lead at the frontier of their discipline.",
+    description: "Deep-dive certifications for educators leading the frontier of their craft.",
+    accent: "#4F8A6B", // sage green
   },
+
 ];
 
 
@@ -231,30 +234,45 @@ function Home() {
           </div>
 
           <div className="grid gap-5 md:grid-cols-5 md:gap-4">
-            {categories.map(({ label, Icon, description }) => (
+            {categories.map(({ label, Icon, description, accent }) => (
               <a
                 key={label}
                 href="#"
-                className="group relative flex h-72 flex-col justify-between overflow-hidden rounded-2xl border border-line bg-canvas p-6 transition-all duration-300 hover:-translate-y-1 hover:border-teal hover:shadow-[0_18px_40px_-18px_rgba(0,122,135,0.55)] focus-visible:border-teal focus-visible:shadow-[0_18px_40px_-18px_rgba(0,122,135,0.55)] focus-visible:outline-none"
+                style={
+                  {
+                    "--accent": accent,
+                  } as CSSProperties
+                }
+                className="group relative flex h-64 flex-col justify-between overflow-hidden rounded-2xl border border-line bg-canvas p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[var(--accent)] hover:shadow-[0_18px_40px_-18px_var(--accent)] focus-visible:border-[var(--accent)] focus-visible:shadow-[0_18px_40px_-18px_var(--accent)] focus-visible:outline-none"
               >
-                <span className="flex size-11 items-center justify-center rounded-sm bg-teal/10 text-teal transition-colors duration-300 group-hover:bg-teal group-hover:text-white group-focus-visible:bg-teal group-focus-visible:text-white">
+                <span
+                  className="flex size-11 items-center justify-center rounded-sm transition-colors duration-300"
+                  style={{
+                    backgroundColor: `color-mix(in oklab, ${accent} 12%, transparent)`,
+                    color: accent,
+                  }}
+                >
                   <Icon className="size-5" strokeWidth={2.25} />
                 </span>
 
-                <div className="flex flex-col gap-3">
-                  <h3 className="text-base font-bold leading-snug text-navy transition-colors duration-300 group-hover:text-teal group-focus-visible:text-teal">
+                <div className="flex flex-col gap-2.5">
+                  <h3 className="text-base font-bold leading-snug text-navy transition-colors duration-300 group-hover:text-[var(--accent)] group-focus-visible:text-[var(--accent)]">
                     {label}
                   </h3>
-                  <p className="max-h-0 text-sm leading-relaxed text-navy/70 opacity-0 transition-all duration-300 group-hover:max-h-48 group-hover:opacity-100 group-focus-visible:max-h-48 group-focus-visible:opacity-100">
+                  <p className="max-h-0 text-[13px] leading-snug text-navy/70 opacity-0 transition-all duration-300 group-hover:max-h-40 group-hover:opacity-100 group-focus-visible:max-h-40 group-focus-visible:opacity-100">
                     {description}
                   </p>
-                  <span className="inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-[0.18em] text-teal opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100">
-                    Learn more <ArrowUpRight className="size-3.5" />
+                  <span
+                    className="inline-flex items-center gap-1 text-[10px] font-semibold uppercase tracking-[0.18em] opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100"
+                    style={{ color: accent }}
+                  >
+                    Learn more <ArrowUpRight className="size-3" />
                   </span>
                 </div>
               </a>
             ))}
           </div>
+
 
 
         </div>
