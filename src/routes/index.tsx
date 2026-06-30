@@ -309,51 +309,6 @@ function Home() {
         </div>
       </section>
 
-      {/* Active Cohorts on navy */}
-      <section id="cohorts" className="bg-navy px-6 py-28 text-white md:py-36">
-        <div className="mx-auto max-w-7xl">
-          <div className="mb-14 flex flex-col items-baseline justify-between gap-4 md:flex-row">
-            <div>
-              <span className="text-xs font-semibold uppercase tracking-[0.25em] text-teal">
-                Upcoming Trainings
-              </span>
-              <h2 className="mt-3 text-3xl font-bold md:text-4xl">Active Cohorts</h2>
-            </div>
-            <a
-              href="#"
-              className="border-b border-teal/40 pb-0.5 text-sm font-semibold text-teal transition-colors hover:border-teal"
-            >
-              View all programmes →
-            </a>
-          </div>
-
-          <div className="grid gap-px overflow-hidden rounded-sm bg-white/10 md:grid-cols-3">
-            {cohorts.map((c) => (
-              <div key={c.title} className="flex flex-col gap-6 bg-navy p-8">
-                <span className="text-[10px] font-semibold uppercase tracking-[0.25em] text-teal">
-                  {c.tag}
-                </span>
-                <h3 className="text-xl font-semibold leading-snug">{c.title}</h3>
-                <div className="h-px w-full bg-white/10" />
-                <div className="flex justify-between text-sm">
-                  <span className="text-white/50">Duration</span>
-                  <span>{c.duration}</span>
-                </div>
-                <div className="flex justify-between text-sm">
-                  <span className="text-white/50">Format</span>
-                  <span>{c.format}</span>
-                </div>
-                <a
-                  href="#"
-                  className="mt-2 inline-flex items-center gap-2 text-sm font-semibold text-teal hover:underline"
-                >
-                  Apply now <ArrowUpRight className="size-4" />
-                </a>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* CTA strip */}
       <section id="cta" className="px-6 py-24">
