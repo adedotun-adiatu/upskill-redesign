@@ -65,26 +65,6 @@ const categories = [
 
 
 
-const cohorts = [
-  {
-    tag: "Open Enrollment",
-    title: "Foundations of Classroom Leadership",
-    duration: "8 Weeks",
-    format: "Hybrid · Lagos",
-  },
-  {
-    tag: "Cohort 04 · 2025",
-    title: "Mental Health Literacy for Educators",
-    duration: "6 Weeks",
-    format: "Online",
-  },
-  {
-    tag: "Spring 2025",
-    title: "Research Methods & Advocacy Lab",
-    duration: "12 Weeks",
-    format: "In-Person · Ibadan",
-  },
-];
 
 function Home() {
 
