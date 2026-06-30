@@ -90,7 +90,7 @@ const cohorts = [
 ];
 
 function Home() {
-  const [activeService, setActiveService] = useState(0);
+
   return (
     <div className="min-h-screen bg-canvas font-sans text-navy">
 
