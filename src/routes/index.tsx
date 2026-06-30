@@ -196,7 +196,7 @@ function Home() {
                 Our Services
               </span>
               <h2 className="mt-3 max-w-[20ch] text-balance text-3xl font-bold leading-tight text-navy md:text-4xl">
-                Five focused pathways for African educators.
+                Four certification tracks for African educators.
               </h2>
             </div>
             <a
