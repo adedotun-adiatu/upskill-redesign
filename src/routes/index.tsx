@@ -64,26 +64,9 @@ const cohorts = [
 function Home() {
   return (
     <div className="min-h-screen bg-canvas font-sans text-navy">
-      {/* Utility Bar */}
-      <div className="bg-navy px-6 py-2.5 text-zinc-300">
-        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-2 text-[11px] font-medium uppercase tracking-widest">
-          <span className="hidden sm:inline">Train a Teacher · Change the World</span>
-          <div className="flex flex-wrap items-center gap-x-6 gap-y-1">
-            <span className="inline-flex items-center gap-1.5">
-              <Phone className="size-3" /> +234 916 291 7152
-            </span>
-            <span className="inline-flex items-center gap-1.5">
-              <MapPin className="size-3" /> Ikoyi, Lagos
-            </span>
-            <span className="hidden md:inline-flex items-center gap-1.5">
-              <Clock className="size-3" /> Mon–Fri 8:00–17:00
-            </span>
-          </div>
-        </div>
-      </div>
-
       {/* Main Nav */}
-      <nav className="sticky top-0 z-50 border-b border-line bg-canvas/90 backdrop-blur-md">
+      <nav className="sticky top-0 z-50 border-b border-line bg-canvas/70 backdrop-blur-xl backdrop-saturate-150">
+
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
           <a href="/" className="flex items-center gap-2.5">
             <div className="flex size-9 items-center justify-center rounded-sm bg-teal">
@@ -121,80 +104,77 @@ function Home() {
         </div>
       </nav>
 
-      {/* Hero — asymmetric editorial grid */}
-      <section className="px-6 pb-24 pt-20 md:pb-32 md:pt-28">
-        <div className="mx-auto grid max-w-7xl gap-x-10 gap-y-12 md:grid-cols-12">
-          <div className="md:col-span-7">
-            <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-teal">
-              <span className="size-1.5 rounded-full bg-teal" /> Welcome to Upskill
-            </span>
-            <h1 className="mt-6 max-w-[18ch] text-balance text-5xl font-bold leading-[1.02] tracking-tight text-navy md:text-7xl">
-              Train a Teacher, <span className="text-teal">change the world.</span>
-            </h1>
-            <p className="mt-8 max-w-[52ch] text-pretty text-lg leading-relaxed text-navy/75 md:text-xl">
-              Upskill Educational Initiative is committed to redefining teacher education
-              through innovative training, research, and advocacy for quality learning
-              outcomes across Africa.
-            </p>
-            <div className="mt-10 flex flex-wrap gap-4">
-              <a
-                href="#programs"
-                className="inline-flex items-center gap-3 rounded-sm bg-teal py-3.5 pl-4 pr-5 text-base font-semibold text-white ring-1 ring-teal/30 transition-colors hover:bg-teal/90"
-              >
-                <span className="size-5 shrink-0 rounded-full bg-white/20" />
-                Browse Programs
-              </a>
-              <a
-                href="#mission"
-                className="inline-flex items-center rounded-sm border border-navy/20 px-6 py-3.5 text-base font-semibold text-navy transition-colors hover:bg-navy/5"
-              >
-                Our Mission
-              </a>
-            </div>
+      {/* Hero */}
+      <section className="px-6 pb-16 pt-20 md:pb-20 md:pt-28">
+        <div className="mx-auto max-w-7xl">
+          <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-teal">
+            <span className="size-1.5 rounded-full bg-teal" /> Welcome to Upskill
+          </span>
+          <h1 className="mt-6 max-w-[18ch] text-balance text-5xl font-bold leading-[1.02] tracking-tight text-navy md:text-7xl">
+            Train a Teacher, <span className="text-teal">Change the world.</span>
+          </h1>
+          <p className="mt-8 max-w-[52ch] text-pretty text-lg leading-relaxed text-navy/75 md:text-xl">
+            Upskill Educational Initiative is committed to redefining teacher education
+            through innovative training, research, and advocacy for quality learning
+            outcomes across Africa.
+          </p>
+          <div className="mt-10 flex flex-wrap gap-4">
+            <a
+              href="#programs"
+              className="inline-flex items-center gap-3 rounded-sm bg-teal py-3.5 pl-4 pr-5 text-base font-semibold text-white ring-1 ring-teal/30 transition-colors hover:bg-teal/90"
+            >
+              <span className="size-5 shrink-0 rounded-full bg-white/20" />
+              Browse Programs
+            </a>
+            <a
+              href="#mission"
+              className="inline-flex items-center rounded-sm border border-navy/20 px-6 py-3.5 text-base font-semibold text-navy transition-colors hover:bg-navy/5"
+            >
+              Our Mission
+            </a>
           </div>
+        </div>
 
-          {/* Asymmetric side-stats column */}
-          <div className="md:col-span-5 md:pt-8">
-            <div className="grid grid-cols-2 gap-px overflow-hidden rounded-sm border border-line bg-line">
-              <div className="flex flex-col gap-2 bg-canvas p-6">
-                <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-navy/50">
-                  Teachers Trained
-                </span>
-                <span className="text-4xl font-bold text-navy">1,800+</span>
-              </div>
-              <div className="flex flex-col gap-2 bg-canvas p-6">
-                <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-navy/50">
-                  Schools Reached
-                </span>
-                <span className="text-4xl font-bold text-navy">120</span>
-              </div>
-              <div className="flex flex-col gap-2 bg-canvas p-6">
-                <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-navy/50">
-                  States Served
-                </span>
-                <span className="text-4xl font-bold text-teal">14</span>
-              </div>
-              <div className="flex flex-col gap-2 bg-canvas p-6">
-                <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-navy/50">
-                  Research Papers
-                </span>
-                <span className="text-4xl font-bold text-teal">32</span>
-              </div>
-            </div>
-
-            <div className="mt-6 flex items-start gap-3 rounded-sm border border-line bg-surface p-5">
-              <BarChart3 className="mt-0.5 size-5 shrink-0 text-teal" />
-              <p className="text-sm leading-relaxed text-navy/75">
-                <span className="font-semibold text-navy">2024 Impact Report</span> — measurable
-                gains in literacy outcomes across partner schools.
-                <a href="#" className="ml-1 font-semibold text-teal hover:underline">
-                  Read findings →
-                </a>
-              </p>
-            </div>
+        {/* Carousel placeholder — picture carousel will go here */}
+        <div className="mx-auto mt-16 max-w-7xl">
+          <div className="flex aspect-[16/7] w-full items-center justify-center rounded-sm border border-dashed border-line bg-surface text-sm font-medium uppercase tracking-[0.25em] text-navy/40">
+            Carousel coming soon
           </div>
         </div>
       </section>
+
+      {/* Impact stats — own row */}
+      <section className="px-6 pb-24 md:pb-28">
+        <div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-[1fr_auto] md:items-stretch">
+          <div className="grid grid-cols-2 gap-px overflow-hidden rounded-sm border border-line bg-line md:grid-cols-4">
+            <div className="flex flex-col gap-2 bg-canvas p-6">
+              <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-navy/50">Teachers Trained</span>
+              <span className="text-4xl font-bold text-navy">1,800+</span>
+            </div>
+            <div className="flex flex-col gap-2 bg-canvas p-6">
+              <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-navy/50">Schools Reached</span>
+              <span className="text-4xl font-bold text-navy">120</span>
+            </div>
+            <div className="flex flex-col gap-2 bg-canvas p-6">
+              <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-navy/50">States Served</span>
+              <span className="text-4xl font-bold text-teal">14</span>
+            </div>
+            <div className="flex flex-col gap-2 bg-canvas p-6">
+              <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-navy/50">Research Papers</span>
+              <span className="text-4xl font-bold text-teal">32</span>
+            </div>
+          </div>
+
+          <div className="flex items-start gap-3 rounded-sm border border-line bg-surface p-5 md:max-w-sm">
+            <BarChart3 className="mt-0.5 size-5 shrink-0 text-teal" />
+            <p className="text-sm leading-relaxed text-navy/75">
+              <span className="font-semibold text-navy">2024 Impact Report</span> — measurable gains in literacy outcomes across partner schools.
+              <a href="#" className="ml-1 font-semibold text-teal hover:underline">Read findings →</a>
+            </p>
+          </div>
+        </div>
+      </section>
+
 
       {/* Category Tiles */}
       <section id="programs" className="border-y border-line bg-zinc-100/40 px-6 py-20">
