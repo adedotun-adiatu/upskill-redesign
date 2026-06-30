@@ -106,42 +106,46 @@ function Home() {
 
       {/* Hero */}
       <section className="px-6 pb-16 pt-20 md:pb-20 md:pt-28">
-        <div className="mx-auto max-w-7xl">
-          <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-teal">
-            <span className="size-1.5 rounded-full bg-teal" /> Welcome to Upskill
-          </span>
-          <h1 className="mt-6 max-w-[18ch] text-balance text-5xl font-bold leading-[1.02] tracking-tight text-navy md:text-7xl">
-            Train a Teacher, <span className="text-teal">Change the world.</span>
-          </h1>
-          <p className="mt-8 max-w-[52ch] text-pretty text-lg leading-relaxed text-navy/75 md:text-xl">
-            Upskill Educational Initiative is committed to redefining teacher education
-            through innovative training, research, and advocacy for quality learning
-            outcomes across Africa.
-          </p>
-          <div className="mt-10 flex flex-wrap gap-4">
-            <a
-              href="#programs"
-              className="inline-flex items-center gap-3 rounded-sm bg-teal py-3.5 pl-4 pr-5 text-base font-semibold text-white ring-1 ring-teal/30 transition-colors hover:bg-teal/90"
-            >
-              <span className="size-5 shrink-0 rounded-full bg-white/20" />
-              Browse Programs
-            </a>
-            <a
-              href="#mission"
-              className="inline-flex items-center rounded-sm border border-navy/20 px-6 py-3.5 text-base font-semibold text-navy transition-colors hover:bg-navy/5"
-            >
-              Our Mission
-            </a>
-          </div>
-        </div>
-
-        {/* Carousel placeholder — picture carousel will go here */}
-        <div className="mx-auto mt-16 max-w-7xl">
-          <div className="flex aspect-[16/7] w-full items-center justify-center rounded-sm border border-dashed border-line bg-surface text-sm font-medium uppercase tracking-[0.25em] text-navy/40">
+        <div className="relative mx-auto max-w-7xl">
+          {/* Carousel placeholder — sits behind the hero text */}
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-0 -z-10 flex items-center justify-center rounded-sm border border-dashed border-line bg-surface/60 text-sm font-medium uppercase tracking-[0.25em] text-navy/30"
+          >
             Carousel coming soon
+          </div>
+
+          <div className="relative px-6 py-16 md:px-12 md:py-24">
+            <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-teal">
+              <span className="size-1.5 rounded-full bg-teal" /> Welcome to Upskill
+            </span>
+            <h1 className="mt-6 max-w-[18ch] text-balance text-5xl font-bold leading-[1.02] tracking-tight text-navy md:text-7xl">
+              Train a Teacher, <span className="text-teal">Change the world.</span>
+            </h1>
+            <p className="mt-8 max-w-[52ch] text-pretty text-lg leading-relaxed text-navy/75 md:text-xl">
+              Upskill Educational Initiative is committed to redefining teacher education
+              through innovative training, research, and advocacy for quality learning
+              outcomes across Africa.
+            </p>
+            <div className="mt-10 flex flex-wrap gap-4">
+              <a
+                href="#programs"
+                className="inline-flex items-center gap-3 rounded-sm bg-teal py-3.5 pl-4 pr-5 text-base font-semibold text-white ring-1 ring-teal/30 transition-colors hover:bg-teal/90"
+              >
+                <span className="size-5 shrink-0 rounded-full bg-white/20" />
+                Browse Programs
+              </a>
+              <a
+                href="#mission"
+                className="inline-flex items-center rounded-sm border border-navy/20 bg-canvas/70 px-6 py-3.5 text-base font-semibold text-navy backdrop-blur-sm transition-colors hover:bg-navy/5"
+              >
+                Our Mission
+              </a>
+            </div>
           </div>
         </div>
       </section>
+
 
       {/* Impact stats — own row */}
       <section className="px-6 pb-24 md:pb-28">
