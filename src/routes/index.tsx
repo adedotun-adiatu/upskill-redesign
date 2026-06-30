@@ -241,7 +241,7 @@ function Home() {
                 style={
                   {
                     "--accent": accent,
-                  } as React.CSSProperties
+                  } as CSSProperties
                 }
                 className="group relative flex h-64 flex-col justify-between overflow-hidden rounded-2xl border border-line bg-canvas p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[var(--accent)] hover:shadow-[0_18px_40px_-18px_var(--accent)] focus-visible:border-[var(--accent)] focus-visible:shadow-[0_18px_40px_-18px_var(--accent)] focus-visible:outline-none"
               >
