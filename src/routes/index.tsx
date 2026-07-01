@@ -126,12 +126,16 @@ function Home() {
       {/* Hero */}
       <section className="px-6 pb-16 pt-20 md:pb-20 md:pt-28">
         <div className="relative mx-auto max-w-7xl">
-          {/* Carousel placeholder — sits behind the hero text */}
-          <div
-            aria-hidden
-            className="pointer-events-none absolute inset-0 -z-10 flex items-center justify-center rounded-sm border border-dashed border-line bg-surface/60 text-sm font-medium uppercase tracking-[0.25em] text-navy/30"
-          >
-            Carousel coming soon
+          {/* Hero background carousel — auto crossfade */}
+          <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden rounded-sm">
+            {heroSlides.map((color, i) => (
+              <div
+                key={color}
+                className="absolute inset-0 transition-opacity duration-[2000ms] ease-in-out"
+                style={{ backgroundColor: color, opacity: slide === i ? 1 : 0 }}
+              />
+            ))}
+            <div className="absolute inset-0 bg-[#0A1F3D]/55" />
           </div>
 
           <div className="relative px-6 py-16 md:px-12 md:py-24">
