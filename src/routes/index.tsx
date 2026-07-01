@@ -67,9 +67,18 @@ const categories = [
 
 
 
-function Home() {
+const heroSlides = ["#0D3D4A", "#0A2E38", "#0F4A5C"];
 
-  return (
+function Home() {
+  const [slide, setSlide] = useState(0);
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setSlide((s) => (s + 1) % heroSlides.length);
+    }, 5000);
+    return () => clearInterval(id);
+  }, []);
+
     <div className="min-h-screen bg-canvas font-sans text-navy">
 
       {/* Main Nav */}
