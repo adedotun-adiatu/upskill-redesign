@@ -100,11 +100,14 @@ function Home() {
             <a href="#" className="text-sm font-semibold text-teal">
               Home
             </a>
+            <a href="#programs" className="text-sm font-bold text-navy transition-colors hover:text-teal">
+              For Teachers
+            </a>
+            <a href="#programs" className="text-sm font-bold text-navy transition-colors hover:text-teal">
+              For Schools
+            </a>
             <a href="#mission" className="text-sm font-medium text-navy/80 transition-colors hover:text-teal">
               About
-            </a>
-            <a href="#programs" className="text-sm font-medium text-navy/80 transition-colors hover:text-teal">
-              Our Services
             </a>
             <a href="#cohorts" className="text-sm font-medium text-navy/80 transition-colors hover:text-teal">
               Media
@@ -124,7 +127,7 @@ function Home() {
       </nav>
 
       {/* Hero */}
-      <section className="px-6 pb-16 pt-20 md:pb-20 md:pt-28">
+      <section className="px-6 pb-16 pt-6 md:pb-20 md:pt-10">
         <div className="relative mx-auto max-w-7xl">
           {/* Hero background carousel — auto crossfade */}
           <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden rounded-sm">
@@ -138,7 +141,7 @@ function Home() {
             <div className="absolute inset-0 bg-[#0A1F3D]/55" />
           </div>
 
-          <div className="relative px-6 py-16 md:px-12 md:py-24">
+          <div className="relative px-6 py-10 md:px-12 md:py-14">
             <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-teal">
               <span className="size-1.5 rounded-full bg-teal" /> Welcome to Upskill
             </span>
@@ -176,19 +179,19 @@ function Home() {
           <div className="grid grid-cols-2 gap-px overflow-hidden rounded-sm border border-line bg-line md:grid-cols-4">
             <div className="flex flex-col gap-2 bg-canvas p-6">
               <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-navy/50">Teachers Trained</span>
-              <span className="text-4xl font-bold text-navy">1,800+</span>
+              <span className="text-4xl font-bold text-navy">5,000+</span>
             </div>
             <div className="flex flex-col gap-2 bg-canvas p-6">
-              <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-navy/50">Schools Reached</span>
-              <span className="text-4xl font-bold text-navy">120</span>
+              <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-navy/50">Training Programs</span>
+              <span className="text-4xl font-bold text-navy">20+</span>
             </div>
             <div className="flex flex-col gap-2 bg-canvas p-6">
-              <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-navy/50">States Served</span>
-              <span className="text-4xl font-bold text-teal">14</span>
+              <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-navy/50">Reach</span>
+              <span className="text-4xl font-bold text-teal">Pan-African</span>
             </div>
             <div className="flex flex-col gap-2 bg-canvas p-6">
-              <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-navy/50">Research Papers</span>
-              <span className="text-4xl font-bold text-teal">32</span>
+              <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-navy/50">Active Partners</span>
+              <span className="text-4xl font-bold text-teal">7</span>
             </div>
           </div>
 
