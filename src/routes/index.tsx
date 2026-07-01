@@ -142,10 +142,10 @@ function Home() {
             <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-teal">
               <span className="size-1.5 rounded-full bg-teal" /> Welcome to Upskill
             </span>
-            <h1 className="mt-6 max-w-[18ch] text-balance text-5xl font-bold leading-[1.02] tracking-tight text-navy md:text-7xl">
+            <h1 className="mt-6 max-w-[18ch] text-balance text-5xl font-bold leading-[1.02] tracking-tight text-white md:text-7xl">
               Train a Teacher, <span className="text-teal">Change the world.</span>
             </h1>
-            <p className="mt-8 max-w-[52ch] text-pretty text-lg leading-relaxed text-navy/75 md:text-xl">
+            <p className="mt-8 max-w-[52ch] text-pretty text-lg leading-relaxed text-white/85 md:text-xl">
               Upskill Educational Initiative is committed to redefining teacher education
               through innovative training, research, and advocacy for quality learning
               outcomes across Africa.
@@ -160,7 +160,7 @@ function Home() {
               </a>
               <a
                 href="#mission"
-                className="inline-flex items-center rounded-sm border border-navy/20 bg-canvas/70 px-6 py-3.5 text-base font-semibold text-navy backdrop-blur-sm transition-colors hover:bg-navy/5"
+                className="inline-flex items-center rounded-sm border border-white/30 bg-white/10 px-6 py-3.5 text-base font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white/20"
               >
                 Our Mission
               </a>
