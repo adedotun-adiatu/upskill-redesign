@@ -1,4 +1,5 @@
 import type { CSSProperties } from "react";
+import { useEffect, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 
 
@@ -66,10 +67,21 @@ const categories = [
 
 
 
+const heroSlides = ["#0D3D4A", "#0A2E38", "#0F4A5C"];
+
 function Home() {
+  const [slide, setSlide] = useState(0);
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setSlide((s) => (s + 1) % heroSlides.length);
+    }, 5000);
+    return () => clearInterval(id);
+  }, []);
 
   return (
     <div className="min-h-screen bg-canvas font-sans text-navy">
+
 
       {/* Main Nav */}
       <nav className="sticky top-0 z-50 border-b border-line bg-canvas/70 backdrop-blur-xl backdrop-saturate-150">
@@ -114,22 +126,26 @@ function Home() {
       {/* Hero */}
       <section className="px-6 pb-16 pt-20 md:pb-20 md:pt-28">
         <div className="relative mx-auto max-w-7xl">
-          {/* Carousel placeholder — sits behind the hero text */}
-          <div
-            aria-hidden
-            className="pointer-events-none absolute inset-0 -z-10 flex items-center justify-center rounded-sm border border-dashed border-line bg-surface/60 text-sm font-medium uppercase tracking-[0.25em] text-navy/30"
-          >
-            Carousel coming soon
+          {/* Hero background carousel — auto crossfade */}
+          <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden rounded-sm">
+            {heroSlides.map((color, i) => (
+              <div
+                key={color}
+                className="absolute inset-0 transition-opacity duration-[2000ms] ease-in-out"
+                style={{ backgroundColor: color, opacity: slide === i ? 1 : 0 }}
+              />
+            ))}
+            <div className="absolute inset-0 bg-[#0A1F3D]/55" />
           </div>
 
           <div className="relative px-6 py-16 md:px-12 md:py-24">
             <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-teal">
               <span className="size-1.5 rounded-full bg-teal" /> Welcome to Upskill
             </span>
-            <h1 className="mt-6 max-w-[18ch] text-balance text-5xl font-bold leading-[1.02] tracking-tight text-navy md:text-7xl">
+            <h1 className="mt-6 max-w-[18ch] text-balance text-5xl font-bold leading-[1.02] tracking-tight text-white md:text-7xl">
               Train a Teacher, <span className="text-teal">Change the world.</span>
             </h1>
-            <p className="mt-8 max-w-[52ch] text-pretty text-lg leading-relaxed text-navy/75 md:text-xl">
+            <p className="mt-8 max-w-[52ch] text-pretty text-lg leading-relaxed text-white/85 md:text-xl">
               Upskill Educational Initiative is committed to redefining teacher education
               through innovative training, research, and advocacy for quality learning
               outcomes across Africa.
@@ -144,7 +160,7 @@ function Home() {
               </a>
               <a
                 href="#mission"
-                className="inline-flex items-center rounded-sm border border-navy/20 bg-canvas/70 px-6 py-3.5 text-base font-semibold text-navy backdrop-blur-sm transition-colors hover:bg-navy/5"
+                className="inline-flex items-center rounded-sm border border-white/30 bg-white/10 px-6 py-3.5 text-base font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white/20"
               >
                 Our Mission
               </a>
