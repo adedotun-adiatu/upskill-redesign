@@ -1,6 +1,6 @@
 import type { CSSProperties } from "react";
 import { useEffect, useState } from "react";
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 
 
 
@@ -87,14 +87,14 @@ function Home() {
       <nav className="sticky top-0 z-50 border-b border-line bg-canvas/70 backdrop-blur-xl backdrop-saturate-150">
 
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
-          <a href="/" className="flex items-center gap-2.5">
+          <Link to="/" className="flex items-center gap-2.5">
             <div className="flex size-9 items-center justify-center rounded-sm bg-teal">
               <div className="size-3 bg-canvas" />
             </div>
             <span className="text-lg font-bold tracking-tight text-navy">
               UPSKILL <span className="text-teal">·</span>
             </span>
-          </a>
+          </Link>
 
           <div className="hidden items-center gap-8 md:flex">
             <a href="#" className="text-sm font-semibold text-teal">
