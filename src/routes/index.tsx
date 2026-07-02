@@ -18,6 +18,7 @@ import missionImage from "@/assets/mission-training.jpg";
 import hero1 from "@/assets/hero1.jpg";
 import hero2 from "@/assets/hero2.jpg";
 import hero3 from "@/assets/hero3.jpg";
+import upIcon from "@/assets/UP_icon-removebg-preview.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -88,9 +89,7 @@ function Home() {
       <nav className="sticky top-0 z-50 border-b border-line bg-canvas/70 backdrop-blur-xl backdrop-saturate-150">
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
           <Link to="/" className="flex items-center gap-2.5">
-            <div className="flex size-9 items-center justify-center rounded-sm bg-teal">
-              <div className="size-3 bg-canvas" />
-            </div>
+            <img src={upIcon} alt="Upskill Logo" className="h-10 w-auto object-contain" />
             <span className="text-lg font-bold tracking-tight text-navy">
               UPSKILL <span className="text-teal">·</span>
             </span>
@@ -142,55 +141,51 @@ function Home() {
       </nav>
 
       {/* Hero */}
-      <section className="px-6 pb-16 pt-6 md:pb-20 md:pt-10">
-        <div className="relative mx-auto max-w-7xl">
-          {/* Hero background carousel — auto crossfade */}
-          <div
-            aria-hidden
-            className="pointer-events-none absolute inset-0 -z-10 overflow-hidden rounded-sm"
-          >
-            {heroSlides.map((url, i) => (
-              <div
-                key={url}
-                className="absolute inset-0 transition-opacity duration-[2000ms] ease-in-out"
-                style={{
-                  backgroundImage: `url(${url})`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  opacity: slide === i ? 1 : 0,
-                }}
-              />
-            ))}
-            <div className="absolute inset-0 bg-[#0A1F3D]/55" />
-          </div>
 
-          <div className="relative px-6 py-10 md:px-12 md:py-14">
-            <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-teal">
-              <span className="size-1.5 rounded-full bg-teal" /> Welcome to Upskill
-            </span>
-            <h1 className="mt-6 max-w-[18ch] text-balance text-5xl font-bold leading-[1.02] tracking-tight text-white md:text-7xl">
-              Train a Teacher, <span className="text-teal">Change the world.</span>
-            </h1>
-            <p className="mt-8 max-w-[52ch] text-pretty text-lg leading-relaxed text-white/85 md:text-xl">
-              Upskill Educational Initiative is committed to redefining teacher education through
-              innovative training, research, and advocacy for quality learning outcomes across
-              Africa.
-            </p>
-            <div className="mt-10 flex flex-wrap gap-4">
-              <a
-                href="#programs"
-                className="inline-flex items-center gap-3 rounded-sm bg-teal py-3.5 pl-4 pr-5 text-base font-semibold text-white ring-1 ring-teal/30 transition-colors hover:bg-teal/90"
-              >
-                <span className="size-5 shrink-0 rounded-full bg-white/20" />
-                Browse Programs
-              </a>
-              <a
-                href="#mission"
-                className="inline-flex items-center rounded-sm border border-white/30 bg-white/10 px-6 py-3.5 text-base font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white/20"
-              >
-                Our Mission
-              </a>
-            </div>
+      <section className="relative w-full h-[calc(100vh-80px)] min-h-[500px] flex items-center px-6">
+        {/* Hero background carousel — auto crossfade */}
+        <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+          {heroSlides.map((url, i) => (
+            <div
+              key={url}
+              className="absolute inset-0 transition-opacity duration-[2000ms] ease-in-out"
+              style={{
+                backgroundImage: `url(${url})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                opacity: slide === i ? 1 : 0,
+              }}
+            />
+          ))}
+          <div className="absolute inset-0 bg-[#0A1F3D]/55" />
+        </div>
+
+        <div className="mx-auto max-w-7xl w-full px-6 md:px-12">
+          <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-teal">
+            <span className="size-1.5 rounded-full bg-teal" /> Welcome to Upskill
+          </span>
+          <h1 className="mt-6 max-w-[18ch] text-balance text-5xl font-bold leading-[1.02] tracking-tight text-white md:text-7xl">
+            Train a Teacher, <span className="text-teal">Change the world.</span>
+          </h1>
+          <p className="mt-8 max-w-[52ch] text-pretty text-lg leading-relaxed text-white/85 md:text-xl">
+            Upskill Educational Initiative is committed to redefining teacher education through
+            innovative training, research, and advocacy for quality learning outcomes across Africa.
+          </p>
+          <div className="mt-10 flex flex-wrap items-center gap-8">
+            <a
+              href="#programs"
+              className="inline-flex items-center gap-v2 text-base font-semibold text-teal hover:text-white transition-colors"
+            >
+              Browse Programs
+              <ArrowUpRight className="size-4" />
+            </a>
+            <a
+              href="#mission"
+              className="inline-flex items-center gap-2 text-base font-semibold text-white hover:text-teal transition-colors"
+            >
+              Our Mission
+              <ArrowUpRight className="size-4" />
+            </a>
           </div>
         </div>
       </section>
