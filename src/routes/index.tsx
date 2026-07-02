@@ -2,8 +2,6 @@ import type { CSSProperties } from "react";
 import { useEffect, useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 
-
-
 import {
   ArrowUpRight,
   BarChart3,
@@ -17,6 +15,9 @@ import {
   Users,
 } from "lucide-react";
 import missionImage from "@/assets/mission-training.jpg";
+import hero1 from "@/assets/hero1.jpg";
+import hero2 from "@/assets/hero2.jpg";
+import hero3 from "@/assets/hero3.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -30,7 +31,8 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "Upskill Educational Initiative" },
       {
         property: "og:description",
-        content: "Train a Teacher, Change the World — teacher training, research, and advocacy across Africa.",
+        content:
+          "Train a Teacher, Change the World — teacher training, research, and advocacy across Africa.",
       },
     ],
   }),
@@ -41,33 +43,34 @@ const categories = [
   {
     label: "Leadership & Management",
     Icon: GraduationCap,
-    description: "Equipping school leaders to drive vision, strategy and lasting institutional change.",
+    description:
+      "Equipping school leaders to drive vision, strategy and lasting institutional change.",
     accent: "#007A87",
   },
   {
     label: "Mental Health",
     Icon: Brain,
-    description: "Frameworks to recognise, respond to, and de-stigmatise mental health in the classroom — building safer spaces for students and teachers.",
+    description:
+      "Frameworks to recognise, respond to, and de-stigmatise mental health in the classroom — building safer spaces for students and teachers.",
     accent: "#C84B31",
   },
   {
     label: "Teaching Skills",
     Icon: BookOpen,
-    description: "Equipping educators with 21st-century classroom techniques, learner-centred pedagogy and tools to drive measurable outcomes.",
+    description:
+      "Equipping educators with 21st-century classroom techniques, learner-centred pedagogy and tools to drive measurable outcomes.",
     accent: "#1D9E75",
   },
   {
     label: "Teacher Immersion",
     Icon: Users,
-    description: "Our flagship programme — real school environments, multidisciplinary learning and hands-on teaching experience.",
+    description:
+      "Our flagship programme — real school environments, multidisciplinary learning and hands-on teaching experience.",
     accent: "#4F8A6B",
   },
 ];
 
-
-
-
-const heroSlides = ["#0D3D4A", "#0A2E38", "#0F4A5C"];
+const heroSlides = [hero1, hero2, hero3];
 
 function Home() {
   const [slide, setSlide] = useState(0);
@@ -81,11 +84,8 @@ function Home() {
 
   return (
     <div className="min-h-screen bg-canvas font-sans text-navy">
-
-
       {/* Main Nav */}
       <nav className="sticky top-0 z-50 border-b border-line bg-canvas/70 backdrop-blur-xl backdrop-saturate-150">
-
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
           <Link to="/" className="flex items-center gap-2.5">
             <div className="flex size-9 items-center justify-center rounded-sm bg-teal">
@@ -100,19 +100,34 @@ function Home() {
             <a href="#" className="text-sm font-semibold text-teal">
               Home
             </a>
-            <a href="#programs" className="text-sm font-bold text-navy transition-colors hover:text-teal">
+            <a
+              href="#programs"
+              className="text-sm font-bold text-navy transition-colors hover:text-teal"
+            >
               For Teachers
             </a>
-            <a href="#programs" className="text-sm font-bold text-navy transition-colors hover:text-teal">
+            <a
+              href="#programs"
+              className="text-sm font-bold text-navy transition-colors hover:text-teal"
+            >
               For Schools
             </a>
-            <a href="#mission" className="text-sm font-medium text-navy/80 transition-colors hover:text-teal">
+            <a
+              href="#mission"
+              className="text-sm font-medium text-navy/80 transition-colors hover:text-teal"
+            >
               About
             </a>
-            <a href="#cohorts" className="text-sm font-medium text-navy/80 transition-colors hover:text-teal">
+            <a
+              href="#cohorts"
+              className="text-sm font-medium text-navy/80 transition-colors hover:text-teal"
+            >
               Media
             </a>
-            <a href="#cta" className="text-sm font-medium text-navy/80 transition-colors hover:text-teal">
+            <a
+              href="#cta"
+              className="text-sm font-medium text-navy/80 transition-colors hover:text-teal"
+            >
               Join Our Team
             </a>
             <a
@@ -130,12 +145,20 @@ function Home() {
       <section className="px-6 pb-16 pt-6 md:pb-20 md:pt-10">
         <div className="relative mx-auto max-w-7xl">
           {/* Hero background carousel — auto crossfade */}
-          <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden rounded-sm">
-            {heroSlides.map((color, i) => (
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-0 -z-10 overflow-hidden rounded-sm"
+          >
+            {heroSlides.map((url, i) => (
               <div
-                key={color}
+                key={url}
                 className="absolute inset-0 transition-opacity duration-[2000ms] ease-in-out"
-                style={{ backgroundColor: color, opacity: slide === i ? 1 : 0 }}
+                style={{
+                  backgroundImage: `url(${url})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  opacity: slide === i ? 1 : 0,
+                }}
               />
             ))}
             <div className="absolute inset-0 bg-[#0A1F3D]/55" />
@@ -149,9 +172,9 @@ function Home() {
               Train a Teacher, <span className="text-teal">Change the world.</span>
             </h1>
             <p className="mt-8 max-w-[52ch] text-pretty text-lg leading-relaxed text-white/85 md:text-xl">
-              Upskill Educational Initiative is committed to redefining teacher education
-              through innovative training, research, and advocacy for quality learning
-              outcomes across Africa.
+              Upskill Educational Initiative is committed to redefining teacher education through
+              innovative training, research, and advocacy for quality learning outcomes across
+              Africa.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <a
@@ -172,25 +195,32 @@ function Home() {
         </div>
       </section>
 
-
       {/* Impact stats — own row */}
       <section className="px-6 pb-24 md:pb-28">
         <div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-[1fr_auto] md:items-stretch">
           <div className="grid grid-cols-2 gap-px overflow-hidden rounded-sm border border-line bg-line md:grid-cols-4">
             <div className="flex flex-col gap-2 bg-canvas p-6">
-              <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-navy/50">Teachers Trained</span>
+              <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-navy/50">
+                Teachers Trained
+              </span>
               <span className="text-4xl font-bold text-navy">5,000+</span>
             </div>
             <div className="flex flex-col gap-2 bg-canvas p-6">
-              <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-navy/50">Training Programs</span>
+              <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-navy/50">
+                Training Programs
+              </span>
               <span className="text-4xl font-bold text-navy">20+</span>
             </div>
             <div className="flex flex-col gap-2 bg-canvas p-6">
-              <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-navy/50">Reach</span>
+              <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-navy/50">
+                Reach
+              </span>
               <span className="text-4xl font-bold text-teal">Pan-African</span>
             </div>
             <div className="flex flex-col gap-2 bg-canvas p-6">
-              <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-navy/50">Active Partners</span>
+              <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-navy/50">
+                Active Partners
+              </span>
               <span className="text-4xl font-bold text-teal">7</span>
             </div>
           </div>
@@ -198,13 +228,15 @@ function Home() {
           <div className="flex items-start gap-3 rounded-sm border border-line bg-surface p-5 md:max-w-sm">
             <BarChart3 className="mt-0.5 size-5 shrink-0 text-teal" />
             <p className="text-sm leading-relaxed text-navy/75">
-              <span className="font-semibold text-navy">2024 Impact Report</span> — measurable gains in literacy outcomes across partner schools.
-              <a href="#" className="ml-1 font-semibold text-teal hover:underline">Read findings →</a>
+              <span className="font-semibold text-navy">2024 Impact Report</span> — measurable gains
+              in literacy outcomes across partner schools.
+              <a href="#" className="ml-1 font-semibold text-teal hover:underline">
+                Read findings →
+              </a>
             </p>
           </div>
         </div>
       </section>
-
 
       {/* Category Tiles */}
       <section id="programs" className="border-y border-line bg-zinc-100/40 px-6 py-20">
@@ -227,7 +259,6 @@ function Home() {
           </div>
 
           <div className="grid gap-5 md:grid-cols-4 md:gap-4">
-
             {categories.map(({ label, Icon, description, accent }) => (
               <a
                 key={label}
@@ -266,9 +297,6 @@ function Home() {
               </a>
             ))}
           </div>
-
-
-
         </div>
       </section>
 
@@ -328,7 +356,6 @@ function Home() {
         </div>
       </section>
 
-
       {/* CTA strip */}
       <section id="cta" className="px-6 py-24">
         <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-8 rounded-sm border border-line bg-surface p-10 md:flex-row md:items-center md:p-14">
@@ -337,8 +364,8 @@ function Home() {
               Ready to take the first step?
             </h3>
             <p className="mt-3 max-w-[52ch] text-base text-navy/70">
-              Partner with us, enrol in a course, or join the team transforming education
-              across the continent.
+              Partner with us, enrol in a course, or join the team transforming education across the
+              continent.
             </p>
           </div>
           <div className="flex flex-wrap gap-3">
@@ -370,13 +397,13 @@ function Home() {
                 <span className="text-lg font-bold tracking-tight">UPSKILL</span>
               </div>
               <p className="max-w-[36ch] text-sm leading-relaxed text-white/60">
-                A non-profit initiative redefining teacher education across Africa —
-                training, research, and advocacy for measurable learning outcomes.
+                A non-profit initiative redefining teacher education across Africa — training,
+                research, and advocacy for measurable learning outcomes.
               </p>
               <div className="flex flex-col gap-2 text-sm text-white/60">
                 <span className="inline-flex items-center gap-2">
-                  <MapPin className="size-4 text-teal" /> 2 Ibeju Lekki Street, Dolphin
-                  Estate, Ikoyi, Lagos
+                  <MapPin className="size-4 text-teal" /> 2 Ibeju Lekki Street, Dolphin Estate,
+                  Ikoyi, Lagos
                 </span>
                 <span className="inline-flex items-center gap-2">
                   <Phone className="size-4 text-teal" /> +234 916 291 7152
